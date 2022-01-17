@@ -5,76 +5,243 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="trackingstyle.css">
+  <link rel="stylesheet" href="output.css">
+  <title>Time tracking dashboard</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
+
+
+
 </head>
-<body>
+<body class="w-full min-h-screen grid place-items-center">
+ <section class="tracking-dash">
+   <section class="tracking-menu">
+     <div class="tracker-owner">
+       <img src="./images/image-jeremy.png" alt="">
+      </div>
+      <div class="tracker-id">
+        <p>Report for</p>
+        <h1 class="textred400 text-2xl">Jeremy Robson</h1>
+       </div>
+       <div class="tracker-options">
+         <button class="tracker-button-option" data-option="daily">Daily</button>
+         <button class="tracker-button-option" data-option="weekly">Weekly</button>
+         <button class="tracker-button-option" data-option="monthly">Monthly</button>
+       </div>
 
-  Report for
-  Jeremy Robson
+       <!-- work -->
+       <section class="tracker-card work">
+         <!-- card background -->
+          <div class="tc-bg">
+            <img src="./images/icon-work.svg" alt="">
+          </div>
 
-  Daily
-  Weekly
-  Monthly
+          <!-- card info -->
+          <div class="tc-info">
+            <header class="tc-header">
+              <h2 class="tc-name">
+                Work
+              </h2>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+              <button class="tc-options">
+                <!-- svg -->
+                <img src="./images/icon-ellipsis.svg" alt="">
+              </button>
+            </header>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+            <div class="tc-timeframes">
+              <h3 class="tc-current-timeframes">
+                32hrs
+              </h3>
+            </div>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+            <div class="tc-previous-timeframes">
+              <p class="tc-window">
+                Last Week - 36hrs
+              </p>
+            </div>
+          </div>
+       </section>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+       <!-- play -->
+       <section class="tracker-card play">
+        <!-- card background -->
+         <div class="tc-bg">
+           <img src="./images/icon-play.svg" alt="">
+         </div>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
+         <!-- card info -->
+         <div class="tc-info">
+           <header class="tc-header">
+             <h2 class="tc-name">
+               Play
+             </h2>
 
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
+             <button class="tc-options">
+               <!-- svg -->
+               <img src="./images/icon-ellipsis.svg" alt="">
+             </button>
+           </header>
 
+           <div class="tc-timeframes">
+             <h3 class="tc-current-timeframes">
+               10hrs
+             </h3>
+           </div>
+
+           <div class="tc-previous-timeframes">
+             <p class="tc-window">
+               Last Week - 8hrs
+             </p>
+           </div>
+         </div>
+      </section>
+
+      <!-- study -->
+      <section class="tracker-card study">
+        <!-- card background -->
+        <div class="tc-bg">
+          <img src="./images/icon-study.svg" alt="">
+        </div>
+
+        <!-- card info -->
+        <div class="tc-info">
+          <header class="tc-header">
+            <h2 class="tc-name">
+              Study
+            </h2>
+
+            <button class="tc-options">
+              <!-- svg -->
+              <img src="./images/icon-ellipsis.svg" alt="">
+            </button>
+          </header>
+
+          <div class="tc-timeframes">
+            <h3 class="tc-current-timeframes">
+              4hrs
+            </h3>
+          </div>
+
+          <div class="tc-previous-timeframes">
+            <p class="tc-window">
+              Last Week - 7hrs
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- exercise -->
+      <section class="tracker-card exercise">
+        <!-- card background -->
+         <div class="tc-bg">
+           <img src="./images/icon-exercise.svg" alt="">
+         </div>
+
+         <!-- card info -->
+         <div class="tc-info">
+           <header class="tc-header">
+             <h2 class="tc-name">
+               Exercise
+             </h2>
+
+             <button class="tc-options">
+               <!-- svg -->
+               <img src="./images/icon-ellipsis.svg" alt="">
+             </button>
+           </header>
+
+           <div class="tc-timeframes">
+             <h3 class="tc-current-timeframes">
+               4hrs
+             </h3>
+           </div>
+
+           <div class="tc-previous-timeframes">
+             <p class="tc-window">
+               Last Week - 5hrs
+             </p>
+           </div>
+         </div>
+      </section>
+
+      <!-- social -->
+      <section class="tracker-card social">
+        <!-- card background -->
+         <div class="tc-bg">
+           <img src="./images/icon-social.svg" alt="">
+         </div>
+
+         <!-- card info -->
+         <div class="tc-info">
+           <header class="tc-header">
+             <h2 class="tc-name">
+               Social
+             </h2>
+
+             <button class="tc-options">
+               <!-- svg -->
+             </button>
+           </header>
+
+           <div class="tc-timeframes">
+             <h3 class="tc-current-timeframes">
+               5hrs
+             </h3>
+           </div>
+
+           <div class="tc-previous-timeframes">
+             <p class="tc-window">
+               Last Week - 10hrs
+             </p>
+           </div>
+         </div>
+      </section>
+
+      <!-- self care -->
+      <section class="tracker-card self-care">
+        <!-- card background -->
+         <div class="tc-bg">
+           <img src="./images/icon-self-care.svg" alt="">
+         </div>
+
+         <!-- card info -->
+         <div class="tc-info">
+           <header class="tc-header">
+             <h2 class="tc-name">
+               Self Care
+             </h2>
+
+             <button class="tc-options">
+               <!-- svg -->
+               <img src="./images/icon-ellipsis.svg" alt="">
+             </button>
+           </header>
+
+           <div class="tc-timeframes">
+             <h3 class="tc-current-timeframes">
+               2hrs
+             </h3>
+           </div>
+
+           <div class="tc-previous-timeframes">
+             <p class="tc-window">
+               Last Week - 2hrs
+             </p>
+           </div>
+         </div>
+      </section>
+   </section>
+ </section>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Ukiwe Stephanie</a>.
   </div>
 </body>
 </html>
