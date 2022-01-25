@@ -18,33 +18,44 @@
 
 
 </head>
-<body class="w-full min-h-screen grid place-items-center">
- <section class="tracking-dash">
-   <section class="tracking-menu">
-     <div class="tracker-owner">
-       <img src="./images/image-jeremy.png" alt="">
-      </div>
-      <div class="tracker-id">
-        <p>Report for</p>
-        <h1 class="textred400 text-2xl">Jeremy Robson</h1>
-       </div>
-       <div class="tracker-options">
-         <button class="tracker-button-option" data-option="daily">Daily</button>
-         <button class="tracker-button-option" data-option="weekly">Weekly</button>
-         <button class="tracker-button-option" data-option="monthly">Monthly</button>
-       </div>
+<!--  min-h-screen grid place-items-center py-16 px-2 -->
+<body class="w-full min-h-screen grid place-items-center  py-16 px-2">
+  <!-- tracking dashboard    w-full h-auto grid auto-row-max grid-cols-1 justify-items-center gap-2-->
+  <section class="tracking-dash w-full h-auto grid auto-row-max justify-items-center gap-10 md:gap-12 lg:max-w-full">
 
+   <section class="tracking-menu overflow-hidden w-full row-span-2 flex flex-nowrap flex-col">
+     <!-- tracker-owner -->
+     <div class="tracker-owner w-full px-12 py-11 flex flex-wrap items-center justify-start gap-4 rounded-2xl md:pt-14 md:pl-11 md:pb-32 md:pr-11 md:flex-nowrap md:flex-col md:items-start md:gap-16">
+       <img class="w-24 border-4 rounded-full md:w-28" src="./images/image-jeremy.png" alt="">
+       <!-- tracker-id -->
+       <div class="tracker-id flex flex-nowrap flex-col gap-2 md:gap-1 md:max-w-2xl">
+        <p class="text-sm font-light text-white">Report for</p>
+        <h1 class="text-white text-4xl">Jeremy Robson</h1>
+      </div>
+      </div>
+        <!-- tracker-options -->
+      <div class="tracker-options py-10 pl-8 pr-12 flex flex-row flex-wrap justify-between gap-1 md:flex-col md:flex-nowrap md:py-12 md:pr-10 md:justify-start gap-10 md:w-max">
+        <button class="tracker-button-option active cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110 hover:text-white" data-option="daily">Daily</button>
+        <button class="tracker-button-option active cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110 hover:text-white" data-option="weekly">Weekly</button>
+        <button class="tracker-button-option active cursor-pointer transition duration-300 hover:-translate-y-1 hover:scale-110 hover:text-white" data-option="monthly">Monthly</button>
+      </div>
+      <!-- </div> -->
+     
+       
+   </section>
+
+    <!-- <div class="tt-card"> -->
        <!-- work -->
-       <section class="tracker-card work">
+       <section class="tracker-card work ">
          <!-- card background -->
           <div class="tc-bg">
-            <img src="./images/icon-work.svg" alt="">
+            <img class="-translate-y-6 translate-x-8 relative z-10" src="./images/icon-work.svg" alt="">
           </div>
 
           <!-- card info -->
-          <div class="tc-info">
-            <header class="tc-header">
-              <h2 class="tc-name">
+          <div class="tc-info relative z-20 text-white h-full flex flex-col flex-nowrap gap-2 py-12 px-10 hover:bg-indigo-900 hover:opacity-90 cursor-pointer md:gap-10 md:py-12 md:px-10">
+            <header class="tc-header flex justify-between flex-wrap items-center gap-4">
+              <h2 class="tc-name font-medium">
                 Work
               </h2>
 
@@ -54,17 +65,19 @@
               </button>
             </header>
 
-            <div class="tc-timeframes">
-              <h3 class="tc-current-timeframes">
+            <div class="tc-timeframes flex justify-between flex-wrap flex-row items-center gap-4 md:flex-col md:items-start md:flex-nowrap">
+              <h3 class="tc-current-timeframes font-light text-5xl">
                 32hrs
               </h3>
+
+              <div class="tc-previous-timeframes">
+                <p class="tc-window">
+                  Last Week - 36hrs
+                </p>
+              </div>
             </div>
 
-            <div class="tc-previous-timeframes">
-              <p class="tc-window">
-                Last Week - 36hrs
-              </p>
-            </div>
+           
           </div>
        </section>
 
@@ -72,13 +85,13 @@
        <section class="tracker-card play">
         <!-- card background -->
          <div class="tc-bg">
-           <img src="./images/icon-play.svg" alt="">
+           <img class="-translate-y-6 translate-x-8 relative z-10" src="./images/icon-play.svg" alt="">
          </div>
 
          <!-- card info -->
-         <div class="tc-info">
-           <header class="tc-header">
-             <h2 class="tc-name">
+         <div class="tc-info relative z-20 text-white h-full flex flex-col flex-nowrap gap-2 py-12 px-10 hover:bg-indigo-900 hover:opacity-90 cursor-pointer md:gap-10 md:py-12 md:px-10">
+           <header class="tc-header flex justify-between flex-wrap items-center gap-4">
+             <h2 class="tc-name font-medium">
                Play
              </h2>
 
@@ -88,17 +101,19 @@
              </button>
            </header>
 
-           <div class="tc-timeframes">
-             <h3 class="tc-current-timeframes">
+           <div class="tc-timeframes flex justify-between flex-wrap flex-row items-center gap-4 md:flex-col md:items-start md:flex-nowrap">
+             <h3 class="tc-current-timeframes font-light text-5xl">
                10hrs
              </h3>
+
+             <div class="tc-previous-timeframes">
+              <p class="tc-window">
+                Last Week - 8hrs
+              </p>
+            </div>
            </div>
 
-           <div class="tc-previous-timeframes">
-             <p class="tc-window">
-               Last Week - 8hrs
-             </p>
-           </div>
+          
          </div>
       </section>
 
@@ -106,13 +121,13 @@
       <section class="tracker-card study">
         <!-- card background -->
         <div class="tc-bg">
-          <img src="./images/icon-study.svg" alt="">
+          <img class="-translate-y-6 translate-x-8 relative z-10" src="./images/icon-study.svg" alt="">
         </div>
 
         <!-- card info -->
-        <div class="tc-info">
-          <header class="tc-header">
-            <h2 class="tc-name">
+        <div class="tc-info relative z-20 text-white h-full flex flex-col flex-nowrap gap-1py-12 py-6 px-10 hover:bg-indigo-900 hover:opacity-90 cursor-pointer md:gap-10 md:py-12 md:px-10">
+          <header class="tc-header flex justify-between flex-wrap items-center gap-4">
+            <h2 class="tc-name font-medium">
               Study
             </h2>
 
@@ -122,17 +137,19 @@
             </button>
           </header>
 
-          <div class="tc-timeframes">
-            <h3 class="tc-current-timeframes">
+          <div class="tc-timeframes flex justify-between flex-wrap flex-row items-center gap-4 md:flex-col md:items-start md:flex-nowrap">
+            <h3 class="tc-current-timeframes font-light text-5xl">
               4hrs
             </h3>
+
+            <div class="tc-previous-timeframes">
+              <p class="tc-window">
+                Last Week - 7hrs
+              </p>
+            </div>
           </div>
 
-          <div class="tc-previous-timeframes">
-            <p class="tc-window">
-              Last Week - 7hrs
-            </p>
-          </div>
+         
         </div>
       </section>
 
@@ -140,13 +157,13 @@
       <section class="tracker-card exercise">
         <!-- card background -->
          <div class="tc-bg">
-           <img src="./images/icon-exercise.svg" alt="">
+           <img class="-translate-y-6 translate-x-8 relative z-10" src="./images/icon-exercise.svg" alt="">
          </div>
 
          <!-- card info -->
-         <div class="tc-info">
-           <header class="tc-header">
-             <h2 class="tc-name">
+         <div class="tc-info relative z-20 text-white h-full flex flex-col flex-nowrap gap-2 py-12 px-10 hover:bg-indigo-900 hover:opacity-90 cursor-pointer md:gap-10 md:py-12 md:px-10">
+           <header class="tc-header flex justify-between flex-wrap items-center gap-4">
+             <h2 class="tc-name font-medium">
                Exercise
              </h2>
 
@@ -156,17 +173,19 @@
              </button>
            </header>
 
-           <div class="tc-timeframes">
-             <h3 class="tc-current-timeframes">
+           <div class="tc-timeframes flex justify-between flex-wrap flex-row items-center gap-4 md:flex-col md:items-start md:flex-nowrap">
+             <h3 class="tc-current-timeframes font-light text-5xl">
                4hrs
              </h3>
+
+             <div class="tc-previous-timeframes">
+              <p class="tc-window">
+                Last Week - 5hrs
+              </p>
+            </div>
            </div>
 
-           <div class="tc-previous-timeframes">
-             <p class="tc-window">
-               Last Week - 5hrs
-             </p>
-           </div>
+           
          </div>
       </section>
 
@@ -174,13 +193,13 @@
       <section class="tracker-card social">
         <!-- card background -->
          <div class="tc-bg">
-           <img src="./images/icon-social.svg" alt="">
+           <img class="-translate-y-6 translate-x-8 relative z-10" src="./images/icon-social.svg" alt="">
          </div>
 
          <!-- card info -->
-         <div class="tc-info">
-           <header class="tc-header">
-             <h2 class="tc-name">
+         <div class="tc-info relative z-20 text-white h-full flex flex-col flex-nowrap gap-2 py-12 px-10 hover:bg-indigo-900 hover:opacity-90 cursor-pointer md:gap-10 md:py-12 md:px-10">
+           <header class="tc-header flex justify-between flex-wrap items-center gap-4">
+             <h2 class="tc-name font-medium">
                Social
              </h2>
 
@@ -189,17 +208,19 @@
              </button>
            </header>
 
-           <div class="tc-timeframes">
-             <h3 class="tc-current-timeframes">
+           <div class="tc-timeframes flex justify-between flex-wrap flex-row items-center gap-4  md:flex-col md:items-start md:flex-nowrap">
+             <h3 class="tc-current-timeframes font-light text-5xl">
                5hrs
              </h3>
+
+             <div class="tc-previous-timeframes">
+              <p class="tc-window">
+                Last Week - 10hrs
+              </p>
+            </div>
            </div>
 
-           <div class="tc-previous-timeframes">
-             <p class="tc-window">
-               Last Week - 10hrs
-             </p>
-           </div>
+          
          </div>
       </section>
 
@@ -207,13 +228,13 @@
       <section class="tracker-card self-care">
         <!-- card background -->
          <div class="tc-bg">
-           <img src="./images/icon-self-care.svg" alt="">
+           <img class="-translate-y-6 translate-x-8 relative z-10" src="./images/icon-self-care.svg" alt="">
          </div>
 
          <!-- card info -->
-         <div class="tc-info">
-           <header class="tc-header">
-             <h2 class="tc-name">
+         <div class="tc-info relative z-20 text-white h-full flex flex-col flex-nowrap gap-2 py-12 px-10 hover:bg-indigo-900 hover:opacity-90 cursor-pointer md:gap-10 md:py-12 md:px-10">
+           <header class="tc-header flex justify-between flex-wrap items-center gap-4">
+             <h2 class="tc-name font-medium">
                Self Care
              </h2>
 
@@ -223,22 +244,25 @@
              </button>
            </header>
 
-           <div class="tc-timeframes">
-             <h3 class="tc-current-timeframes">
+           <div class="tc-timeframes flex justify-between flex-wrap flex-row items-center gap-4 md:flex-col md:items-start md:flex-nowrap">
+             <h3 class="tc-current-timeframes font-light text-5xl">
                2hrs
              </h3>
+
+             <div class="tc-previous-timeframes">
+              <p class="tc-window">
+                Last Week - 2hrs
+              </p>
+            </div>
            </div>
 
-           <div class="tc-previous-timeframes">
-             <p class="tc-window">
-               Last Week - 2hrs
-             </p>
-           </div>
+           
          </div>
       </section>
-   </section>
+    <!-- </div> -->
  </section>
   
+ <!-- attribution -->
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Ukiwe Stephanie</a>.
